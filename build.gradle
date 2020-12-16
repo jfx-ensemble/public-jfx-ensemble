@@ -1,0 +1,62 @@
+System.setProperty("file.encoding", "UTF-8")
+
+buildscript {
+  repositories {
+    gradlePluginPortal()
+    jcenter()
+
+    maven {
+      url  "https://sandec.bintray.com/repo"
+    }
+  }
+
+  dependencies {
+    classpath "com.sandec.jpro:jpro-plugin-gradle:$JPRO_VERSION"
+    classpath 'org.openjfx:javafx-plugin:0.0.9'
+    classpath "com.javafxensemble.website:ensemble-gradle-plugin:$ENSEMBLE_VERSION"
+  }
+}
+
+configure(allprojects) {
+  repositories {
+    jcenter()
+    maven {
+      url "http://sandec.bintray.com/repo"
+    }
+    maven {
+      url "http://sandec.bintray.com/test"
+    }
+  }
+  apply plugin: 'java'
+}
+
+apply plugin: 'ensemble'
+
+repositories {
+  maven {
+    url  "https://dl.bintray.com/dlsc-oss/repository"
+  }
+}
+
+configure(project(":gemsfx")) {
+  dependencies {
+    compile group: 'com.dlsc.gemsfx', name: 'gemsfx-demo', version: '1.23.0'
+    compile group: 'com.dlsc.gemsfx', name: 'gemsfx-demo', version: '1.23.0', classifier: 'sources'
+  }
+}
+
+subprojects {
+  //project.afterEvaluate {
+    ensemble {
+      println(" ############################ " + project.getName())
+      includeProject(project.getName(), project)
+    }
+  //}
+}
+//afterEvaluate {
+// ensemble {
+//   includeProject("gemsfx", project(":gemsfx"))
+// }
+//}
+
+

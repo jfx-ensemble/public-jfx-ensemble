@@ -1,0 +1,4 @@
+dependencies {
+    compile group: 'com.dlsc.pickerfx', name: 'pickerfx-demo', version: '1.1.0'
+    compile group: 'com.dlsc.pickerfx', name: 'pickerfx-demo', version: '1.1.0', classifier: 'sources'
+}

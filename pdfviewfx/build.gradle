@@ -1,0 +1,10 @@
+/*repositories {
+    maven {
+        url  "https://dl.bintray.com/dlsc-oss/repository"
+    }
+}*/
+
+dependencies {
+    compile group: 'com.dlsc.pdfviewfx', name: 'pdfviewfx-demo', version: '1.0.1'
+    compile group: 'com.dlsc.pdfviewfx', name: 'pdfviewfx-demo', version: '1.0.1', classifier: 'sources'
+}

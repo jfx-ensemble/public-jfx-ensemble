@@ -1,3 +1,5 @@
 rootProject.name = 'public-javafx-ensemble'
 
 include "gemsfx"
+include "pdfviewfx"
+include "pickerfx"

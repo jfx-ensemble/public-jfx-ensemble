@@ -38,13 +38,6 @@ repositories {
   }
 }
 
-configure(project(":gemsfx")) {
-  dependencies {
-    compile group: 'com.dlsc.gemsfx', name: 'gemsfx-demo', version: '1.23.0'
-    compile group: 'com.dlsc.gemsfx', name: 'gemsfx-demo', version: '1.23.0', classifier: 'sources'
-  }
-}
-
 subprojects {
   //project.afterEvaluate {
     ensemble {

@@ -42,6 +42,7 @@ subprojects {
   //project.afterEvaluate {
     ensemble {
       println(" ############################ " + project.getName())
+      if(!rootProject.hasProperty('ONLY_PROJECT') || rootProject.getProperty('ONLY_PROJECT') == project.getName())
       includeProject(project.getName(), project)
     }
   //}

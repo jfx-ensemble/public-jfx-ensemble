@@ -59,4 +59,11 @@ subprojects {
 // }
 //}
 
-
+test {
+  testLogging {
+    showStandardStreams = true
+    showCauses = true
+    showExceptions = true
+    showStackTraces = true
+  }
+}

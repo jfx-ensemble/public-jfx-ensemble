@@ -22,7 +22,7 @@ These Projects are currently added and can be used as an reference:
 ### How does it work?
 The website will check the file `ensemble-samples.json` in the root package.
 Each sample listed in the file will get added to the ensemble-page.
-Take a look at this example: `https://github.com/dlsc-software-consulting-gmbh/GemsFX/blob/master/gemsfx-demo/src/main/resources/ensemble-samples.json`
+Take a look at these examples: [1 GemsFX](https://github.com/dlsc-software-consulting-gmbh/GemsFX/blob/master/gemsfx-demo/src/main/resources/ensemble-samples.json`)
 
 Each sample has the following required properties:
 * name: The name of the sample.
